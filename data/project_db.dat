@@ -333,6 +333,8 @@ enemy{ id = "tentacle", description = "Tentacle" }
 enemy{ id = "blue_hardhat_beetle", description = "Hardhat Beetle (blue)" }
 enemy{ id = "red_hardhat_beetle", description = "Hardhat Beetle (red)" }
 
+entity{ id = "towa00", description = "Fireball shooting tower" }
+
 language{ id = "de", description = "Deutsch" }
 language{ id = "en", description = "English" }
 language{ id = "es", description = "Español" }

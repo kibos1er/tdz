@@ -15,10 +15,10 @@ function item:on_using()
 
   for entity in map:get_entities_in_rectangle(x, y, 1, 1) do
     if entity ~= nil then
-      if entity:get_type() == "enemy" then
+      if entity:get_type() == "custom_entity" then
         if entity:get_name() ~= nil and entity:get_name():sub(1, 4) == "towa" then
           sol.audio.play_sound("bomb")
-          game:add_money(5)
+          game:add_money(entity.price / 2)
           
           entity:remove()
           self:set_finished()
@@ -35,15 +35,19 @@ function item:on_using()
   end
 
   sol.audio.play_sound("ok")
-  local toto = map:create_enemy{
-  name = "towa" .. game.nb_towers,
-  x = x,
-  y = y,
-  direction = 1,
-  breed = "medusa",
-  layer = 0
+
+
+  local toto = map:create_custom_entity{
+    name = "towa00",
+    x = x,
+    y = y,
+    direction = 1,
+    sprite = "enemies/medusa",
+    model = "towa00",
+    layer = 0
   }
-  game:remove_money(10)
+
+  game:remove_money(toto.price)
   game.nb_towers = game.nb_towers + 1
   self:set_finished()
 end
