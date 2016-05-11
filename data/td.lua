@@ -10,6 +10,7 @@ local wnumber = 0
 local wspeed = 0
 local wwait = 0
 local wlife = 0
+local wrupees = 0
 local nb_targets = 0
 
 local hero_meta = sol.main.get_metatable("hero") 
@@ -50,6 +51,7 @@ local function repeat_spawner()
 	wspeed = waves[id_wave + 1][3]
 	wwait = waves[id_wave + 1][4]
 	wlife = waves[id_wave + 1][5]
+	wrupees = waves[id_wave + 1][6]
 
   local en = map:create_enemy{
     name = "toto" .. nb_spawn,
@@ -57,7 +59,9 @@ local function repeat_spawner()
     layer = 0,
     x = lx,
 		y = ly,
-    direction = 3
+    direction = 3,
+    treasure_name = "rupee",
+    treasure_variant = wrupees
   }
 
   en.wspeed = wspeed
@@ -121,7 +125,7 @@ function map:on_started()
   game:set_money(money)
 
   local rupee_bag = game:get_item("rupee_bag")
-  rupee_bag:set_variant(1)
+  rupee_bag:set_variant(2)
 
   local cane = game:get_item("cane_of_somaria")
   cane:set_variant(1)
