@@ -64,6 +64,7 @@ local function repeat_spawner()
     treasure_variant = wrupees
   }
 
+  en:set_obstacle_behavior("flying")
   en.wspeed = wspeed
   en.target = 0
   en.total_life = wlife
@@ -196,6 +197,7 @@ function map:on_started()
     end
 
     local lx, ly, lw, lh = map:get_entity("target_" .. nb_targets):get_bounding_box()
+    local cx, cy = map:get_camera():get_position()
 
     local surf = sol.text_surface.create({
           text = nb_out,
@@ -205,8 +207,8 @@ function map:on_started()
           horizontal_alignment = "center",
           vertical_alignment = "middle"})
 
-    surf:draw(destination_surface, lx + lw / 2, ly + lh / 2)
-
+    surf:draw(destination_surface, lx + lw / 2 - cx, ly + lh / 2 - cy)
+  
     if self:get_game().pressed then
       self:draw_sprite(self.cursor_sprite, self.cursor_x, self.cursor_y)
     end
