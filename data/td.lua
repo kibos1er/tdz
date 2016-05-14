@@ -96,6 +96,13 @@ function map:on_started()
       self.pressed = true
       return true
     end
+    if command == "item_2" then
+      self.tower_item = self.tower_item + 1
+      if self.tower_item > 2 then
+        self.tower_item = 1
+      end
+      return false
+    end
     return false
   end
 
@@ -123,6 +130,8 @@ function map:on_started()
   game:set_ability("detect_weak_walls", 0)
   game:set_life(20)
   game:set_money(money)
+
+  game.tower_item = 1
 
   local rupee_bag = game:get_item("rupee_bag")
   rupee_bag:set_variant(2)

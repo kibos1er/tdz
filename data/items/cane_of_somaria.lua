@@ -1,5 +1,7 @@
 local item = ...
 
+local towers = require("towers")
+
 function item:on_created()
 
   self:set_savegame_variable("i1109")
@@ -36,14 +38,15 @@ function item:on_using()
 
   sol.audio.play_sound("ok")
 
+  local tower_item = game.tower_item
 
   local toto = map:create_custom_entity{
-    name = "towa00",
+    name = towers[tower_item][1],
     x = x,
     y = y,
     direction = 1,
-    sprite = "enemies/medusa",
-    model = "towa00",
+    sprite = towers[tower_item][2],
+    model = towers[tower_item][1],
     layer = 0
   }
 

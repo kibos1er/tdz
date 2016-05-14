@@ -6,13 +6,12 @@ map{ id = "level_02", description = "2" }
 tileset{ id = "0", description = "House" }
 tileset{ id = "1", description = "Light World" }
 
+sprite{ id = "enemies/blue_hardhat_beetle", description = "Enemy: Hardhat Beetle (blue)" }
+sprite{ id = "enemies/enemy_killed", description = "Enemy killed" }
 sprite{ id = "enemies/fireball_red_small", description = "Red small Fireball" }
 sprite{ id = "enemies/medusa", description = "Medusa" }
-sprite{ id = "enemies/tentacle", description = "Enemy: Tentacle" }
-sprite{ id = "enemies/blue_hardhat_beetle", description = "Enemy: Hardhat Beetle (blue)" }
 sprite{ id = "enemies/red_hardhat_beetle", description = "Enemy: Hardhat Beetle (red)" }
-sprite{ id = "enemies/enemy_killed", description = "Enemy killed" }
-
+sprite{ id = "enemies/tentacle", description = "Enemy: Tentacle" }
 sprite{ id = "entities/arrow", description = "Arrow" }
 sprite{ id = "entities/bed", description = "Hero's bed" }
 sprite{ id = "entities/big_chest", description = "Chest (big)" }
@@ -83,8 +82,8 @@ sprite{ id = "hero/trail", description = "Hero trail" }
 sprite{ id = "hero/tunic1", description = "Hero tunic 1" }
 sprite{ id = "hero/tunic2", description = "Hero tunic 2" }
 sprite{ id = "hero/tunic3", description = "Hero tunic 3" }
-sprite{ id = "hud/cursor", description = "cursor" }
 sprite{ id = "hud/action_icon_flip", description = "HUD: Action icon" }
+sprite{ id = "hud/cursor", description = "cursor" }
 sprite{ id = "hud/dialog_box_message_end", description = "Dialog end" }
 sprite{ id = "hud/empty_heart", description = "HUD: Empty heart" }
 sprite{ id = "hud/gameover_fade", description = "HUD: Game-over fade" }
@@ -327,13 +326,14 @@ item{ id = "tunic", description = "Tunic (green / blue / red)" }
 item{ id = "wooden_key", description = "Wooden key" }
 item{ id = "world_map", description = "World map" }
 
+enemy{ id = "blue_hardhat_beetle", description = "Hardhat Beetle (blue)" }
 enemy{ id = "fireball_red_small", description = "Red small Fireball" }
 enemy{ id = "medusa", description = "Medusa" }
-enemy{ id = "tentacle", description = "Tentacle" }
-enemy{ id = "blue_hardhat_beetle", description = "Hardhat Beetle (blue)" }
 enemy{ id = "red_hardhat_beetle", description = "Hardhat Beetle (red)" }
+enemy{ id = "tentacle", description = "Tentacle" }
 
 entity{ id = "towa00", description = "Fireball shooting tower" }
+entity{ id = "towa01", description = "Minigun tower" }
 
 language{ id = "de", description = "Deutsch" }
 language{ id = "en", description = "English" }

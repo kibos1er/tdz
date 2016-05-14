@@ -8,8 +8,8 @@ local tower_id = nil
 
 function entity:on_created()
 
-  self.sound_lock = self:get_map().towa00_lock
-  tower_id = 1
+  self.sound_lock = self:get_map().towa01_lock
+  tower_id = 2
 
   self.damage = towers[tower_id][3]
   self.distance = towers[tower_id][4]
