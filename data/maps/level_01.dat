@@ -666,7 +666,7 @@ custom_entity{
   name = "target_13",
   layer = 0,
   x = 40,
-  y = 13,
+  y = 21,
   direction = 0,
 }
 
@@ -679,6 +679,15 @@ teletransporter{
   destination_map = "hub",
   destination = "destination",
   sound = "warp",
+}
+
+wall{
+  layer = 0,
+  x = 192,
+  y = 40,
+  width = 8,
+  height = 24,
+  stops_enemies = true,
 }
 
 tile{

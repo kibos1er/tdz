@@ -118,6 +118,7 @@ function map:on_started()
 
   self.pressed = false
   self.cursor_sprite = sol.sprite.create("hud/cursor")
+  self.circle_sprite = sol.sprite.create("circle")
   self.cursor_x = 0
   self.cursor_y = 0
 
@@ -211,6 +212,7 @@ function map:on_started()
   
     if self:get_game().pressed then
       self:draw_sprite(self.cursor_sprite, self.cursor_x, self.cursor_y)
+      self:draw_sprite(self.circle_sprite, self.cursor_x, self.cursor_y)
     end
   end
 

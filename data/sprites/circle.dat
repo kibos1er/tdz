@@ -1,0 +1,9 @@
+animation{
+  name = "default",
+  src_image = "circle.png",
+  frame_delay = 100,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 0, y = 0, frame_width = 128, frame_height = 128, origin_x = 56, origin_y = 56, num_frames = 4, num_columns = 1 },
+  },
+}

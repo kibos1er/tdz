@@ -7,6 +7,7 @@ map{ id = "level_03", description = "3" }
 tileset{ id = "0", description = "House" }
 tileset{ id = "1", description = "Light World" }
 
+sprite{ id = "circle", description = "circle" }
 sprite{ id = "enemies/blue_hardhat_beetle", description = "Enemy: Hardhat Beetle (blue)" }
 sprite{ id = "enemies/enemy_killed", description = "Enemy killed" }
 sprite{ id = "enemies/fireball_red_small", description = "Red small Fireball" }
