@@ -12,8 +12,8 @@ function item:on_using()
   local game = self:get_game()
   local map = self:get_map()
 
-	local x = map.cursor_x + 8
-	local y = map.cursor_y + 13
+	local x = map.cursor_x
+	local y = map.cursor_y
 
   for entity in map:get_entities_in_rectangle(x, y, 1, 1) do
     if entity ~= nil then
@@ -53,29 +53,6 @@ function item:on_using()
   game:remove_money(toto.price)
   game.nb_towers = game.nb_towers + 1
   self:set_finished()
-end
-
-function item:get_block_position_from_hero()
-
-  -- Compute a position
-  local hero = self:get_map():get_entity("hero")
-  local x, y, layer = hero:get_position()
-  local direction = hero:get_direction()
-  if direction == 0 then
-    x = x + 21
-  elseif direction == 1 then
-    y = y - 21
-  elseif direction == 2 then
-    x = x - 21
-  elseif direction == 3 then
-    y = y + 21
-  end
-
-  -- Snap the center of the block to the 8*8 grid.
-  x = (x + 4) - (x + 4) % 8
-  y = (y - 1) - (y - 1) % 8 + 5
-
-  return x, y, layer
 end
 
 function item:on_obtained(variant, savegame_variable)

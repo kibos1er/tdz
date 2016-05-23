@@ -27,8 +27,8 @@ function hero_meta:on_position_changed(x, y, layer)
   elseif direction == 3 then
     y = y
   end
-  x = (x + 4) - (x + 4) % 16
-  y = (y - 1) - (y - 1) % 16
+  x = x - x % 16 + 7
+  y = y - y % 16 + 7
 
   map.cursor_x = x
   map.cursor_y = y
