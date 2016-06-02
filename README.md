@@ -1,7 +1,7 @@
 
 # TDZ
 
-This package contains the data files of the game TZD (Tower Defense Zelda).
+This package contains the data files of the game TDZ (Tower Defense Zelda).
 This game is free and open-source. It works with [Solarus](https://github.com/christopho/solarus),
 an open-source Zelda-like 2D game engine.
 To play this game, you need Solarus.
